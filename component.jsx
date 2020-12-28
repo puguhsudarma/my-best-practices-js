@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 
+const rand = Math.random();
+
 const Component = () => {
-    useEffect(() => {
-        // handler
-    }, []);
+    if (rand > 0.3) {
+        useEffect(() => {
+            // handler
+        }, []);
+    }
 
     return (
         <div>
