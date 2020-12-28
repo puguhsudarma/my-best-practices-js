@@ -53,25 +53,23 @@ export function pickMostBestFruit(fruit?: string, quantity?: number) {
 
 // 3. Lookup map
 export function getStatusColor(status: string) {
-    switch (status) {
-        case 'pending':
-            return 'red';
+    let color = '';
 
-        case 'created':
-            return 'green';
-
-        case 'progress':
-            return 'blue';
-
-        case 'delivered':
-            return 'purple';
-
-        case 'completed':
-            return 'torquise';
-
-        default:
-            return 'yellow';
+    if (status === 'pending') {
+        color = 'red';
+    } else if (status === 'created') {
+        color = 'green';
+    } else if (status === 'progress') {
+        color = 'blue';
+    } else if (status === 'delivered') {
+        color = 'purple';
+    } else if (status === 'completed') {
+        color = 'torquise';
+    } else {
+        color = 'yellow';
     }
+
+    return color;
 }
 
 // 4. Ternary operators
